@@ -22,7 +22,7 @@ const FormRegistration = () => {
 
     // POST request to the updated API route
     axios
-      .post("/api/v1/users/register", {
+      .post("https://hevenhubbackend.onrender.com/api/v1/users/register", {
         fname: fname,
         lname: lname,
         email: email,
