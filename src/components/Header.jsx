@@ -53,7 +53,7 @@ function Header() {
 
   const handleLogout = async () => {
     try {
-      const response = await fetch('/api/v1/users/logout', {
+      const response = await fetch('https://hevenhubbackend.onrender.com/api/v1/users/logout', {
         method: 'POST',
         credentials: 'include', // Include cookies in the request
       });
