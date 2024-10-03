@@ -55,6 +55,10 @@ function Header() {
     try {
       const response = await fetch('https://hevenhubbackend.onrender.com/api/v1/users/logout', {
         method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${localStorage.getItem('token')}`, // Ensure the token is sent
+        },
         credentials: 'include', // Include cookies in the request
       });
       if (response.ok) {
